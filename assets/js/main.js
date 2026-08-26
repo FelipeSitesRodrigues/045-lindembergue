@@ -60,7 +60,7 @@
     revealables.forEach(function (el) { el.classList.add('is-in'); });
   } else {
     // escalonamento por grupo, para os itens de uma mesma grade entrarem em sequência
-    ['.cards', '.mods', '.stats__grid', '.checks'].forEach(function (sel) {
+    ['.cards', '.dims', '.areas', '.mods', '.stats__grid', '.checks'].forEach(function (sel) {
       var group = document.querySelector(sel);
       if (!group) return;
       Array.prototype.forEach.call(group.children, function (child, i) {
