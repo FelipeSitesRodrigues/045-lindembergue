@@ -173,11 +173,11 @@ html{ scrollbar-color:var(--steel) var(--ink); scrollbar-width:thin; }
 /* placa clara atrás da logomarca: pedido do cliente, é o que puxa o olho no topo */
 .brand{
   flex:none; display:block; line-height:0;
-  background:#fff; padding:.34rem .58rem; border-radius:var(--r-sm);
+  background:#fff; padding:.28rem .5rem; border-radius:var(--r-sm);
   box-shadow:0 10px 26px -14px rgba(0,0,0,.85), 0 0 0 1px rgba(255,255,255,.5);
   transition:transform .3s var(--out), box-shadow .3s var(--out);
 }
-.brand img{ width:126px; height:auto; }
+.brand img{ width:100px; height:auto; }
 .brand:hover{
   transform:translateY(-1px);
   box-shadow:0 16px 32px -14px rgba(0,0,0,.9), 0 0 0 1px var(--halo);
@@ -241,16 +241,22 @@ html{ scrollbar-color:var(--steel) var(--ink); scrollbar-width:thin; }
      está a 6,5% do topo do arquivo, o que colocava o cabelo atrás do header fixo. */
   background-position:right bottom;
   background-size:auto 86%;
-  box-shadow:inset 0 12vh 9vh -6vh var(--ink);
   animation:heroIn 1.5s var(--out) both;
+}
+/* esfumado do topo em porcentagem do próprio bloco, não em vh: com vh o degradê
+   crescia junto com a altura da janela e cobria a cabeça dele em telas altas */
+.hero__bg::after{
+  content:""; position:absolute; inset:0;
+  background:linear-gradient(to bottom, var(--ink) 0%, rgba(5,10,24,0) 20%);
 }
 /* telas muito largas: a figura para de fugir para a borda e a direita ganha
    um esfumado, senão aparece a emenda entre a foto e o fundo da seção */
 @media (min-width:1800px){
-  .hero__bg{
-    background-position:right calc((100vw - 1800px) / 2) bottom 0;
-    box-shadow:inset 0 12vh 9vh -6vh var(--ink),
-               inset -14vw 0 12vw -8vw var(--ink);
+  .hero__bg{ background-position:right calc((100vw - 1800px) / 2) bottom 0; }
+  .hero__bg::after{
+    background:
+      linear-gradient(to bottom, var(--ink) 0%, rgba(5,10,24,0) 20%),
+      linear-gradient(to left,   var(--ink) 0%, rgba(5,10,24,0) 26%);
   }
 }
 .hero__veil{
@@ -391,7 +397,12 @@ html{ scrollbar-color:var(--steel) var(--ink); scrollbar-width:thin; }
 
 .sect__lead{
   text-align:center; max-width:62ch; margin:0 auto 3.2rem;
-  color:var(--on-light-soft);
+  color:var(--on-light);
+}
+/* o cliente pediu esse bloco em preto, era o texto de abertura das tres dimensões */
+.sect__lead--strong{
+  max-width:70ch; font-size:1.06rem; font-weight:500;
+  color:var(--on-light);
 }
 .sect--dark .sect__lead,.sect--deep .sect__lead{ color:var(--on-dark-soft); }
 .sect--light .eyebrow{ text-align:center; }
@@ -872,7 +883,7 @@ html{ scrollbar-color:var(--steel) var(--ink); scrollbar-width:thin; }
 
   .burger{ display:block; }
   .site-head__cta{ display:none; }
-  .brand img{ width:90px; }
+  .brand img{ width:72px; }
   .brand{ padding:.3rem .5rem; }
 
   .nav{
