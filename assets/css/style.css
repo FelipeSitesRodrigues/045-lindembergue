@@ -828,8 +828,9 @@ html{ scrollbar-color:var(--steel) var(--ink); scrollbar-width:thin; }
 .foot__col--contact span{ display:block; font-size:.8rem; opacity:.75; }
 .foot__col--contact{ font-style:normal; }
 
-/* faixa da Tork: o próprio cliente pediu pra indicar quem fez o site.
-   Fica discreta em repouso e só o anel pulsando puxa o olho. */
+/* faixa da Credialta Sites: o próprio cliente pediu pra indicar quem fez o site.
+   Roxo da marca, que também separa do azul do cliente. Fica discreta em repouso
+   e só o anel pulsando puxa o olho. */
 .foot__tork{
   display:flex; flex-wrap:wrap; align-items:center; justify-content:center;
   gap:.8rem 1.1rem; text-align:center;
@@ -844,24 +845,25 @@ html{ scrollbar-color:var(--steel) var(--ink); scrollbar-width:thin; }
   padding:.74rem 1.4rem; border-radius:99px;
   font-family:'Archivo',sans-serif; font-weight:700; font-size:.74rem;
   letter-spacing:.08em; text-transform:uppercase; color:#fff;
-  background:rgba(45,91,227,.16);
-  border:1px solid rgba(111,160,255,.42);
+  background:rgba(124,58,237,.2);
+  border:1px solid rgba(167,139,250,.5);
   transition:background-color .25s var(--out), border-color .25s var(--out), transform .25s var(--out);
 }
-.tork-btn .ico{ width:17px; height:17px; color:var(--halo); transition:color .25s var(--out); }
+.tork-btn .ico{ width:17px; height:17px; color:#C4B5FD; transition:color .25s var(--out); }
 .tork-btn::before{
   content:''; position:absolute; inset:0; z-index:-1; border-radius:inherit;
   animation:torkPulse 3s var(--out) infinite;
 }
 .tork-btn:hover{
-  background:var(--brand-lit); border-color:var(--brand-lit); transform:translateY(-2px);
+  background:#7C3AED; border-color:#7C3AED; transform:translateY(-2px);
+  box-shadow:0 12px 28px -14px rgba(124,58,237,.9);
 }
 .tork-btn:hover .ico{ color:#fff; }
 .tork-btn:hover::before{ animation:none; }
 @keyframes torkPulse{
-  0%  { box-shadow:0 0 0 0 rgba(111,160,255,.5); }
-  70% { box-shadow:0 0 0 13px rgba(111,160,255,0); }
-  100%{ box-shadow:0 0 0 0 rgba(111,160,255,0); }
+  0%  { box-shadow:0 0 0 0 rgba(139,92,246,.55); }
+  70% { box-shadow:0 0 0 13px rgba(139,92,246,0); }
+  100%{ box-shadow:0 0 0 0 rgba(139,92,246,0); }
 }
 
 .foot__base{
