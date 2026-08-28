@@ -828,6 +828,42 @@ html{ scrollbar-color:var(--steel) var(--ink); scrollbar-width:thin; }
 .foot__col--contact span{ display:block; font-size:.8rem; opacity:.75; }
 .foot__col--contact{ font-style:normal; }
 
+/* faixa da Tork: o próprio cliente pediu pra indicar quem fez o site.
+   Fica discreta em repouso e só o anel pulsando puxa o olho. */
+.foot__tork{
+  display:flex; flex-wrap:wrap; align-items:center; justify-content:center;
+  gap:.8rem 1.1rem; text-align:center;
+  padding:1.9rem 0 1.7rem;
+  border-top:1px solid rgba(111,160,255,.12);
+}
+.foot__tork p{ margin:0; font-size:.84rem; color:var(--on-dark-soft); }
+
+.tork-btn{
+  position:relative; isolation:isolate; max-width:100%;
+  display:inline-flex; align-items:center; justify-content:center; gap:.55rem;
+  padding:.74rem 1.4rem; border-radius:99px;
+  font-family:'Archivo',sans-serif; font-weight:700; font-size:.74rem;
+  letter-spacing:.08em; text-transform:uppercase; color:#fff;
+  background:rgba(45,91,227,.16);
+  border:1px solid rgba(111,160,255,.42);
+  transition:background-color .25s var(--out), border-color .25s var(--out), transform .25s var(--out);
+}
+.tork-btn .ico{ width:17px; height:17px; color:var(--halo); transition:color .25s var(--out); }
+.tork-btn::before{
+  content:''; position:absolute; inset:0; z-index:-1; border-radius:inherit;
+  animation:torkPulse 3s var(--out) infinite;
+}
+.tork-btn:hover{
+  background:var(--brand-lit); border-color:var(--brand-lit); transform:translateY(-2px);
+}
+.tork-btn:hover .ico{ color:#fff; }
+.tork-btn:hover::before{ animation:none; }
+@keyframes torkPulse{
+  0%  { box-shadow:0 0 0 0 rgba(111,160,255,.5); }
+  70% { box-shadow:0 0 0 13px rgba(111,160,255,0); }
+  100%{ box-shadow:0 0 0 0 rgba(111,160,255,0); }
+}
+
 .foot__base{
   display:flex; flex-wrap:wrap; gap:1rem; justify-content:space-between; align-items:center;
   padding:1.5rem 0; border-top:1px solid rgba(111,160,255,.12);
@@ -981,9 +1017,11 @@ html{ scrollbar-color:var(--steel) var(--ink); scrollbar-width:thin; }
   .foot__brand{ grid-column:1 / -1; }
   .foot__col--contact{ grid-column:1 / -1; }
   .foot__base{ flex-direction:column; text-align:center; }
+  .foot__tork{ flex-direction:column; gap:1rem; padding:1.7rem 0 1.5rem; }
 }
 
 @media (max-width:420px){
+  .tork-btn{ font-size:.69rem; letter-spacing:.05em; padding:.7rem 1.1rem; }
   .mods{ grid-template-columns:1fr; gap:1.6rem; }
   .foot__grid{ grid-template-columns:1fr; }
   .hero__badge{ padding:1.1rem 1.2rem; }
