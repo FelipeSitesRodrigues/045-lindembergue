@@ -685,7 +685,15 @@ html{ scrollbar-color:var(--steel) var(--ink); scrollbar-width:thin; }
   border-radius:var(--r);
   border:1px solid rgba(111,160,255,.22);
   box-shadow:0 40px 70px -34px rgba(0,0,0,.9);
+  transition:transform .45s var(--out), box-shadow .45s var(--out);
 }
+.book__cover a{ display:block; }
+.book__cover a:hover img{
+  transform:translateY(-6px);
+  box-shadow:0 50px 80px -34px rgba(0,0,0,.95);
+}
+
+.book__cta{ display:flex; flex-wrap:wrap; gap:.9rem; }
 .book__text p{ color:var(--on-dark-soft); }
 .book__sub{
   font-family:'Archivo',sans-serif; font-weight:600;
@@ -1004,6 +1012,7 @@ html{ scrollbar-color:var(--steel) var(--ink); scrollbar-width:thin; }
   .book__grid{ grid-template-columns:1fr; gap:2.4rem; }
   .book__cover{ max-width:360px; margin-inline:auto; }
   .book__meta{ gap:1.6rem; }
+  .book__cta{ flex-direction:column; }
   .book__text .btn{ width:100%; }
 
   .stats__grid{ grid-template-columns:1fr 1fr; gap:2.4rem 0; }

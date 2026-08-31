@@ -87,6 +87,18 @@
   "publisher": { "@type": "Organization", "name": "Pontão Virtual Publicações" },
   "isbn": "978-65-062795-4-7",
   "inLanguage": "pt-BR",
+  "url": "https://go.hotmart.com/G107372127F",
+  "workExample": {
+    "@type": "Book",
+    "bookFormat": "https://schema.org/EBook",
+    "isbn": "978-65-062795-4-7",
+    "inLanguage": "pt-BR",
+    "potentialAction": {
+      "@type": "ReadAction",
+      "target": { "@type": "EntryPoint", "urlTemplate": "https://go.hotmart.com/G107372127F" },
+      "expectsAcceptanceOf": { "@type": "Offer", "category": "purchase" }
+    }
+  },
   "numberOfPages": null,
   "about": "Administração, Gestão, Empreendedorismo e Liderança"
 }
@@ -185,6 +197,10 @@
   </symbol>
   <symbol id="ico-yt" viewBox="0 0 24 24" fill="currentColor">
     <path d="M21.6 7.2a2.5 2.5 0 0 0-1.76-1.77C18.26 5 12 5 12 5s-6.26 0-7.84.43A2.5 2.5 0 0 0 2.4 7.2 26.2 26.2 0 0 0 2 12a26.2 26.2 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.76 1.77C5.74 19 12 19 12 19s6.26 0 7.84-.43a2.5 2.5 0 0 0 1.76-1.77A26.2 26.2 0 0 0 22 12a26.2 26.2 0 0 0-.4-4.8ZM10.1 15V9l5.2 3-5.2 3Z"/>
+  </symbol>
+  <symbol id="ico-cart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M2.8 3.6h2.4l2.3 10.2a1.7 1.7 0 0 0 1.66 1.3h7.7a1.7 1.7 0 0 0 1.66-1.3l1.38-6.1H6.2"/>
+    <circle cx="9.6" cy="19.4" r="1.4"/><circle cx="17.4" cy="19.4" r="1.4"/>
   </symbol>
   <symbol id="ico-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
     <circle cx="12" cy="12" r="8.6"/><path d="M12 7.2V12l3.2 2"/>
@@ -553,8 +569,10 @@
 <section class="sect sect--dark book" id="livro">
   <div class="wrap book__grid">
     <figure class="book__cover reveal">
-      <img src="assets/img/capa-livro.webp" width="820" height="1139" loading="lazy"
-           alt="Capa do livro Gestão de Excelência, Metodologia ADVISER">
+      <a href="https://go.hotmart.com/G107372127F" target="_blank" rel="noopener" aria-label="Comprar o e-book Gestão de Excelência na Hotmart">
+        <img src="assets/img/capa-livro.webp" width="820" height="1139" loading="lazy"
+             alt="Capa do livro Gestão de Excelência, Metodologia ADVISER">
+      </a>
     </figure>
 
     <div class="book__text">
@@ -572,12 +590,19 @@
         <div><dt>Editora</dt><dd>Pontão Virtual Publicações</dd></div>
         <div><dt>ISBN</dt><dd>978-65-062795-4-7</dd></div>
         <div><dt>Formato</dt><dd>Impresso e e-book</dd></div>
+        <div><dt>E-book</dt><dd>Disponível na Hotmart</dd></div>
       </dl>
 
-      <a class="btn btn--primary" href="https://wa.me/5521967021002?text=Ol%C3%A1%2C%20Sr.%20Lindembergue!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20livro%20*Gest%C3%A3o%20de%20Excel%C3%AAncia*." target="_blank" rel="noopener">
-        <svg class="ico" aria-hidden="true"><use href="#ico-wa"/></svg>
-        Quero saber do livro
-      </a>
+      <div class="book__cta">
+        <a class="btn btn--primary" href="https://go.hotmart.com/G107372127F" target="_blank" rel="noopener">
+          <svg class="ico" aria-hidden="true"><use href="#ico-cart"/></svg>
+          Comprar o e-book
+        </a>
+        <a class="btn btn--ghost" href="https://wa.me/5521967021002?text=Ol%C3%A1%2C%20Sr.%20Lindembergue!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20livro%20*Gest%C3%A3o%20de%20Excel%C3%AAncia*." target="_blank" rel="noopener">
+          <svg class="ico" aria-hidden="true"><use href="#ico-wa"/></svg>
+          Falar sobre o livro
+        </a>
+      </div>
     </div>
   </div>
 </section>
