@@ -714,6 +714,21 @@ html{ scrollbar-color:var(--steel) var(--ink); scrollbar-width:thin; }
   letter-spacing:.15em; text-transform:uppercase; color:var(--on-dark-soft);
 }
 
+.book__launch{
+  display:flex; align-items:center; gap:1.1rem;
+  margin:2rem 0 0; padding:1.1rem 1.3rem; border-radius:var(--r-sm);
+  border:1px solid rgba(111,160,255,.34); background:rgba(45,91,227,.14);
+}
+.book__launch .ico{ color:var(--halo); flex:none; }
+.book__text .book__launch p{ margin:0; }
+.book__text .book__launch-tag{
+  font-size:.68rem; letter-spacing:.18em; text-transform:uppercase; color:var(--halo);
+}
+.book__text .book__launch-when{
+  margin-top:.3rem; font-family:'Archivo',sans-serif; font-weight:600; font-size:1.08rem; color:#fff;
+}
+.book__text .book__launch-where{ font-size:.9rem; color:var(--on-dark-soft); }
+
 .book__meta{
   display:flex; flex-wrap:wrap; gap:2.2rem;
   margin:2rem 0 2.4rem; padding:1.5rem 0;
